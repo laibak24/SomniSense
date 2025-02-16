@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0c0f18;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    height: 100vh;
+    overflow: hidden;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Left Section (Heading & Description) */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Typewriter Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typewriter {
+    font-size: 3rem;
+    font-weight: bold;
+    border-right: 3px solid #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+    animation: typing 3s steps(14, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    max-width: 400px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Right Section (Chatbot) */
+.chat-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chatbot Icon */
+#chatbase-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}

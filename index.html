@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomniSense - Dream Interpreter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Heading & Description -->
+        <div class="left-section">
+            <h1 class="typewriter">SomniSense</h1>
+            <p class="description">
+                An AI-powered dream interpreter to decode your dreams.  
+                <br><br>Try it now by clicking the chatbot icon below!
+            </p>
+        </div>
+
+        <!-- Right Section: Chatbot -->
+        <div class="chat-container">
+            <div id="chat-box"></div>
+        </div>
+    </div>
+    
+    <script> 
+        (function(){
+            if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+                window.chatbase = (...arguments) => {
+                    if (!window.chatbase.q) { window.chatbase.q = []; }
+                    window.chatbase.q.push(arguments);
+                };
+                window.chatbase = new Proxy(window.chatbase, {
+                    get(target, prop) {
+                        if (prop === "q") { return target.q; }
+                        return (...args) => target(prop, ...args);
+                    }
+                });
+            }
+            const onLoad = function() {
+                const script = document.createElement("script");
+                script.src = "https://www.chatbase.co/embed.min.js";
+                script.id = "dAdrtlZrquqZhYOTI9-U9";
+                script.domain = "www.chatbase.co";
+                document.body.appendChild(script);
+            };
+            if (document.readyState === "complete") { onLoad(); }
+            else { window.addEventListener("load", onLoad); }
+        })();
+    </script>
+</body>
+</html>
