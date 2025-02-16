@@ -12,10 +12,6 @@ SomniSense is an AI-powered dream interpretation web app that helps users decode
 ![image](https://github.com/user-attachments/assets/f1fc33d3-3833-4811-8468-b1e1704f2467)
 ![image](https://github.com/user-attachments/assets/f7bfe12c-2264-49b3-9467-916d33548625)
 
-## 🎨 Tech Stack  
-- **Frontend:** HTML, CSS  
-- **Chatbot Integration:** [Chatbase](https://www.chatbase.co/)  
-
 ## 🛠 Installation & Setup  
 1. **Clone the Repository**  
    ```sh
